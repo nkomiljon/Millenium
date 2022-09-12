@@ -1,0 +1,53 @@
+
+.btn {
+    width: auto;
+    cursor: pointer;
+}
+
+
+.btn-theme {
+   // display: flex;
+    background: #6B5AF9;
+    border-radius: 5px;
+}
+
+.btn-call {
+    
+    padding: 22px 33px;
+}
+
+.btn-info-price {
+    padding: 22px 78px;
+}
+
+.btn-typography {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+
+
+
+@media (min-width: 425px) and (max-width: 1024px) {
+    .btn-call {
+        display: flex;
+        padding: 9px 21px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .btn-call {
+        display: flex;
+        padding: 8px 18px;
+
+        & > img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
