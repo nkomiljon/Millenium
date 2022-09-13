@@ -256,6 +256,9 @@ main, section {
   background-color: #FFFFFF;
   border-radius: 5px;
 }
+.btn-feedback--active {
+  background-color: #6B5AF9;
+}
 
 .btn-feedback-text {
   color: #6B5AF9 !important;
@@ -723,7 +726,7 @@ main, section {
   width: auto;
 }
 .feedback__description {
-  max-width: 448px;
+  flex: 1 0 45%;
   margin-right: 44px;
 }
 .feedback__description-title {
@@ -752,11 +755,11 @@ main, section {
   padding: 41px 98px 187px 98px;
 }
 .feedback__form {
-  max-width: 472px;
+  flex: 1 0 45%;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 56px 64px 47px 64px;
+  padding: 56px 60px 47px 60px;
   background: #6B5AF9;
   border-radius: 20px;
   z-index: 0;
@@ -773,6 +776,9 @@ main, section {
   text-align: center;
   color: #FFFFFF;
 }
+.feedback__form-text {
+  margin-bottom: 45px;
+}
 .feedback__form-text > p {
   font-family: "Montserrat";
   font-style: normal;
@@ -780,6 +786,53 @@ main, section {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
+  color: #FFFFFF;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__item {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.form__item-btn {
+  margin-bottom: 25px;
+}
+.form__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.form__input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.form__checkbox-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 15px;
+  color: #9B8FFF;
+}
+.form__checkbox-text--active {
   color: #FFFFFF;
 }
 
@@ -817,6 +870,98 @@ main, section {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 10px;
+}
+
+.footer {
+  background-color: #2A2367;
+}
+.footer__inner {
+  padding: 75px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer__title {
+  margin-bottom: 30px;
+}
+.footer__title > .title {
+  color: #FFFFFF !important;
+}
+.footer__call-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 33px;
+  margin-bottom: 44px;
+  border-bottom: 0.5px solid #6B5AF9;
+}
+.footer__email > a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #6B5AF9;
+}
+.footer__info-area {
+  display: flex;
+  flex-flow: row wrap;
+}
+.footer__address, .footer__social {
+  flex: 1 0 50%;
+  width: 50%;
+}
+.footer__logo {
+  flex: 1 0 100%;
+  width: 100px;
+}
+.footer__address-mark {
+  margin-bottom: 24px;
+}
+.footer__address-mark > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.footer__address-time > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo-img {
+  margin-bottom: 20px;
+}
+.footer__logo-text {
+  margin-bottom: 16px;
+}
+.footer__logo-text > p, .footer__logo-text > a, .footer__logo-link > p, .footer__logo-link > a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+.footer__logo-link > a {
+  text-decoration: underline;
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.footer__social-icon:first-child {
+  margin-right: 20px;
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
@@ -975,11 +1120,32 @@ main, section {
   .feedback__form {
     margin: 0 auto;
     width: 100%;
+    max-width: 472px;
   }
 
   .circle-img {
     top: -60px;
     left: -280px;
+  }
+
+  .footer__email > a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 35px;
+    color: #6B5AF9;
+  }
+  .footer__address-mark > p, .footer__address-time > p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+  .footer__logo-text > p {
+    word-break: break-all;
   }
 }
 @media (min-width: 320px) and (max-width: 425px) {
@@ -1174,6 +1340,10 @@ main, section {
     color: #FFFFFF;
   }
 
+  .form__item-btn {
+    margin: 20px 0 35px 0;
+  }
+
   .like-img {
     max-width: 212px;
     max-height: 113px;
@@ -1185,8 +1355,8 @@ main, section {
     max-height: 42px;
     background-size: contain;
     background-position: center;
-    top: -70px;
-    left: 20px;
+    top: -105px;
+    left: 35px;
   }
 
   .cube-img {
@@ -1194,6 +1364,62 @@ main, section {
     max-height: 91px;
     background-size: contain;
     right: 0;
+  }
+
+  .footer__title {
+    margin-bottom: 11px;
+  }
+  .footer__call-area {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .footer__email {
+    padding-bottom: 30px;
+    border-bottom: 0.5px solid #6B5AF9;
+  }
+  .footer__email > a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6B5AF9;
+  }
+  .footer__btn {
+    margin: 30px 0;
+  }
+  .footer__info-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__address, .footer__social, .footer__logo {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+  .footer__address {
+    margin-bottom: 30px;
+  }
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    order: -1;
+    margin-bottom: 46px;
+  }
+  .footer__logo {
+    padding: 0 48px;
+  }
+  .footer__logo-text {
+    margin-bottom: 30px;
+  }
+  .footer__logo-text > p {
+    text-align: center;
+  }
+  .footer__logo-link {
+    margin-bottom: 18px;
   }
 }
 
