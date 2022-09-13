@@ -29,6 +29,16 @@
     color: #FFFFFF;
 }
 
+.btn-feedback {
+    padding: 21px 103px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.btn-feedback-text {
+    color: #6B5AF9!important;
+}
+
 
 
 
@@ -49,5 +59,25 @@
             width: 16px;
             height: 16px;
         }
+    }
+
+
+    .btn-feedback {
+        padding: 21px 64px;
+    }
+
+    .btn-feedback-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #6B5AF9;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .btn-feedback {
+        padding: 21px 58px;
     }
 }
